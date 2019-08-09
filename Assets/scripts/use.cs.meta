@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: bae9e85f798a6434f837fdad3e74b2ba
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ramp: {fileID: 5959338797905575665, guid: 445ad35e79ed58e46bd82b625e23d70f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
