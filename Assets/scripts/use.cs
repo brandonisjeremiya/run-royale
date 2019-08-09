@@ -23,7 +23,7 @@ public class use : MonoBehaviour {
 	} 
 */
 	void Update (){
-		
+	
 	}
 
 public void use_ramp(){
