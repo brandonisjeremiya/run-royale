@@ -57,7 +57,7 @@ public class player : MonoBehaviour
     	// left, right and forward
 
         if(move_forward == true){
-             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,7f*Time.deltaTime);
+             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,6f*Time.deltaTime);
         }else{
             transform.Translate(Vector3.back * 0.05f);
         }

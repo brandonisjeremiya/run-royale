@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ramp: {fileID: 5959338797905575665, guid: 445ad35e79ed58e46bd82b625e23d70f, type: 3}
+  fireball: {fileID: 4460039661372635316, guid: de4f4cbb3e1a1fa48a8a40808ac54912,
+    type: 3}
 --- !u!114 &7083682399750807731
 MonoBehaviour:
   m_ObjectHideFlags: 0
