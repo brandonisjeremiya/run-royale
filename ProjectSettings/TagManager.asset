@@ -10,6 +10,7 @@ TagManager:
   - item3blue
   - wall
   - ramp
+  - boost
   layers:
   - Default
   - TransparentFX

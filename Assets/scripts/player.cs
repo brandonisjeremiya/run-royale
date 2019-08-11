@@ -18,8 +18,9 @@ public class player : MonoBehaviour
     
     // When set to true, player move forward, otherwise, bounce back
     public bool move_forward  = true; 
-    // slide
-    
+
+    // boosted
+    public bool boosted  = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -32,35 +33,22 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // placing rampInput.GetMouseButtonDown(0)
-         if(Input.GetKeyDown(KeyCode.E))
-         {
-        /* if(Input.GetMouseButtonDown(0))
-         {*/
-           /* int tcount =  System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) - 1;
-            this.transform.Find("Text").GetComponent<Text>().text = "" + tcount;*/
-
-           /* if((System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) > 0){
-                
-            }else{
-                int tcount =  System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) - 1;
-                this.transform.Find("Text").GetComponent<Text>().text = "" + tcount;
-            }*/
-
-            //Instantiate(ramp, transform.position+(transform.forward*3), transform.rotation);
-
-              //Instantiate(ramp, transform.position+(transform.forward*3), transform.rotation);
-            }
-           // }
-         //}
+      
 
     	// left, right and forward
 
         if(move_forward == true){
-             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,6f*Time.deltaTime);
+             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,7.5f*Time.deltaTime);
         }else{
             transform.Translate(Vector3.back * 0.05f);
         }
+
+        if(boosted == true){
+             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,12f*Time.deltaTime);
+        }
+        // else{
+            
+        // }
 
         // jump
         if(onGround) {
@@ -92,6 +80,14 @@ public class player : MonoBehaviour
             move_forward = false;
            StartCoroutine(bounce_back_timer(0.8f));
         }
+
+        // boost when hit boost pad
+
+        if (any.gameObject.tag == "boost")
+        {
+            boosted = true;
+           StartCoroutine(bounce_back_timer(0.5f));
+        }
     }
 
     //This function set how long the player bounce back
@@ -100,21 +96,22 @@ public class player : MonoBehaviour
         
             yield return new WaitForSeconds(countdownValue);
             move_forward = true;
+            boosted = false;
      }
 
-      void use_ramp(){
+    //   void use_ramp(){
 
        
-        if(System.Int32.Parse( GameObject.Find("item1 1").transform.Find("Text").GetComponent<Text>().text) == 0){
+    //     if(System.Int32.Parse( GameObject.Find("item1 1").transform.Find("Text").GetComponent<Text>().text) == 0){
 
-        }else{
-            int tcount =  System.Int32.Parse(GameObject.Find("item1 1").transform.Find("Text").GetComponent<Text>().text) - 1;
-            GameObject.Find("item1 1").transform.Find("Text").GetComponent<Text>().text = "" + tcount;
-            Instantiate(ramp, GameObject.Find("player 1").transform.position+(GameObject.Find("player 1").transform.forward*3), GameObject.Find("player 1").transform.rotation);
+    //     }else{
+    //         int tcount =  System.Int32.Parse(GameObject.Find("item1 1").transform.Find("Text").GetComponent<Text>().text) - 1;
+    //         GameObject.Find("item1 1").transform.Find("Text").GetComponent<Text>().text = "" + tcount;
+    //         Instantiate(ramp, GameObject.Find("player 1").transform.position+(GameObject.Find("player 1").transform.forward*3), GameObject.Find("player 1").transform.rotation);
             
-        }
+    //     }
         
-    }
+    // }
 
     
     
