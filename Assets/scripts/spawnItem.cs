@@ -6,14 +6,14 @@ public class spawnItem : MonoBehaviour
 {
 
 	public GameObject item;
-	int spawnNum = 1;
+	int spawnNum = 3;
 
 	void spawn (){
 		for (int i = 0; i < spawnNum; i++)
 		{
-			Vector3 itemPos = new Vector3(this.transform.position.x,
-											this.transform.position.y,
-											this.transform.position.z);
+			Vector3 itemPos = new Vector3(this.transform.position.x + Random.Range(-3f,3.0f),
+											this.transform.position.y + Random.Range(0f,0f),
+											this.transform.position.z + Random.Range(0f,3.0f));
 			Instantiate(item, itemPos, Quaternion.identity);
 		}
 	}

@@ -22,11 +22,15 @@ public class player : MonoBehaviour
     // boosted
     public bool boosted  = false; 
 
+    // sliding
+    public bool is_sliding  = false; 
+
     // Start is called before the first frame update
     void Start()
     {
     	moveSpeed = 5f;
     	onGround = true;
+        is_sliding  = false;
     	rb = GetComponent<Rigidbody>();
     }
 
@@ -38,7 +42,7 @@ public class player : MonoBehaviour
     	// left, right and forward
 
         if(move_forward == true){
-             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,7.5f*Time.deltaTime);
+             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,5f*Time.deltaTime);
         }else{
             transform.Translate(Vector3.back * 0.05f);
         }
@@ -56,16 +60,26 @@ public class player : MonoBehaviour
         		rb.velocity = new Vector3(0f,4.5f,0f);
         		onGround = false;
         	}
-
         }
 
         // slide
+
 		if (Input.GetKeyDown ("s")) {
+            is_sliding = true;
 			transform.localScale = new Vector3 (0.2946206f, 0.3f,0.3475012f);
+            StartCoroutine(timer(1.3f));
 		}
-		if (Input.GetKeyUp ("s")) {
-			transform.localScale = new Vector3 (0.2946206f, 0.9268705f,0.3475012f);
-		}
+
+        if(is_sliding == false) {
+            transform.localScale = new Vector3 (0.2946206f, 0.9268705f,0.3475012f);
+        }
+
+  //       if (Input.GetKeyDown ("s")) {
+  //           transform.localScale = new Vector3 (0.2946206f, 0.3f,0.3475012f);
+  //       }
+		// if (Input.GetKeyUp ("s")) {
+		// 	transform.localScale = new Vector3 (0.2946206f, 0.9268705f,0.3475012f);
+		// }
     }
 
     // if grounded jump
@@ -78,7 +92,7 @@ public class player : MonoBehaviour
         if (any.gameObject.tag == "wall")
         {
             move_forward = false;
-           StartCoroutine(bounce_back_timer(0.8f));
+           StartCoroutine(timer(0.8f));
         }
 
         // boost when hit boost pad
@@ -86,17 +100,17 @@ public class player : MonoBehaviour
         if (any.gameObject.tag == "boost")
         {
             boosted = true;
-           StartCoroutine(bounce_back_timer(0.5f));
+           StartCoroutine(timer(0.5f));
         }
     }
 
     //This function set how long the player bounce back
-     public IEnumerator bounce_back_timer(float countdownValue)
+     public IEnumerator timer(float countdownValue)
      {
-        
             yield return new WaitForSeconds(countdownValue);
             move_forward = true;
             boosted = false;
+            is_sliding = false;
      }
 
     //   void use_ramp(){
