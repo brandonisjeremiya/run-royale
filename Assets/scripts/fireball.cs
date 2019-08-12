@@ -17,14 +17,27 @@ public class fireball : MonoBehaviour
     
     void Update()
     {
-    	
+        // velocity
+
     	if(move_forward == true){
-             rb.AddForce(0f,0f,20f);
-        }else{
+             GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,15f);
+        }
+        else{
             rb.AddForce(0f,0f,0f);
         }
+
+        // force
+
+    	// if(move_forward == true){
+     //         rb.AddForce(0f,0f,200f);
+     //    }else{
+     //        rb.AddForce(0f,0f,0f);
+     //    }
+
+        // translate
+
         // transform.Translate(0f,0f,20f*Time.deltaTime);
-        // GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,20f);
+        
     }
 
     void OnCollisionEnter(Collision any) {
