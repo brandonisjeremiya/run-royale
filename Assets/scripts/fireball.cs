@@ -4,16 +4,34 @@ using UnityEngine;
 
 public class fireball : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+	private Rigidbody rb;
+	public bool move_forward  = true; 
+
+    
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
+    	
+    	if(move_forward == true){
+             rb.AddForce(0f,0f,20f);
+        }else{
+            rb.AddForce(0f,0f,0f);
+        }
         // transform.Translate(0f,0f,20f*Time.deltaTime);
-        GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,20f);
+        // GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,20f);
+    }
+
+    void OnCollisionEnter(Collision any) {
+
+        if (any.gameObject.tag == "wall")
+        {
+            move_forward = false;
+        }
     }
 }
