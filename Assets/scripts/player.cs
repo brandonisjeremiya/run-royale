@@ -42,7 +42,7 @@ public class player : MonoBehaviour
     	// left, right and forward
 
         if(move_forward == true){
-             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,8f*Time.deltaTime);
+             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,7.5f*Time.deltaTime);
         }else{
             transform.Translate(Vector3.back * 0.05f);
         }
@@ -50,8 +50,11 @@ public class player : MonoBehaviour
         if(boosted == true){
              transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,12f*Time.deltaTime);
         }
+        // if(boosted == true){
+        //      rb.velocity = new Vector3(0f,0f,15f);
+        // }
         // else{
-            
+        //     rb.AddForce(0f,0f,0f);
         // }
 
         // jump

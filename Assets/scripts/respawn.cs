@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class respawn : MonoBehaviour
 {
-    [SerializeField] private Transform player;
-    [SerializeField] private Transform respawnPoint;
+    // [SerializeField] private Transform player;
+    // [SerializeField] private Transform respawnPoint;
+    public Transform player;
+    public Transform respawnPoint;
 
     void OnTriggerEnter(Collider other)
     {

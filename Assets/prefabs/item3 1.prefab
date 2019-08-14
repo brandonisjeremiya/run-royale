@@ -89,6 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae9e85f798a6434f837fdad3e74b2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ramp: {fileID: 0}
+  fireball: {fileID: 0}
+  boostPad: {fileID: 410268674487146313, guid: 35273468d456c3a4e82f381015adfee4, type: 3}
 --- !u!114 &6550208901895198663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +133,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5139243816786925486}
-        m_MethodName: useMe
+        m_MethodName: use_boostPad
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -11,9 +11,9 @@ public class spawnItem : MonoBehaviour
 	void spawn (){
 		for (int i = 0; i < spawnNum; i++)
 		{
-			Vector3 itemPos = new Vector3(this.transform.position.x + Random.Range(-3f,3.0f),
+			Vector3 itemPos = new Vector3(this.transform.position.x + Random.Range(-1f,1.0f),
 											this.transform.position.y + Random.Range(0f,0f),
-											this.transform.position.z + Random.Range(0f,3.0f));
+											this.transform.position.z + Random.Range(0f,1.0f));
 			Instantiate(item, itemPos, Quaternion.identity);
 		}
 	}

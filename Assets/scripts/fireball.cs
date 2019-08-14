@@ -20,7 +20,7 @@ public class fireball : MonoBehaviour
         // velocity
 
     	if(move_forward == true){
-             GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,15f);
+             GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,20f);
         }
         else{
             rb.AddForce(0f,0f,0f);
