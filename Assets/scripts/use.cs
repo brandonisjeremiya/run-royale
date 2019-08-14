@@ -42,7 +42,7 @@ public void use_ramp(){
         }else{
             int tcount =  System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) - 1;
            this.transform.Find("Text").GetComponent<Text>().text = "" + tcount;
-            Instantiate(ramp, GameObject.Find("player 1").transform.position+(GameObject.Find("player 1").transform.forward*3), GameObject.Find("player 1").transform.rotation);
+            Instantiate(ramp, GameObject.Find("player 1").transform.position+(GameObject.Find("player 1").transform.forward*2), GameObject.Find("player 1").transform.rotation);
             
         }
         

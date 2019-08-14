@@ -10,8 +10,18 @@ public class respawn : MonoBehaviour
     public Transform respawnPoint;
 
     void OnTriggerEnter(Collider other)
+    
     {
+    	Debug.Log (gameObject.name + "was triggered by " + other.gameObject.name);
         player.transform.position = respawnPoint.transform.position;
     }
+
+	// void OnTriggerEnter(Collider other) {
+	//     if(gameObject.name == "player 1")
+	//      {
+	//      	Debug.Log (gameObject.name + "was triggered by " + other.gameObject.name);
+	//          player.transform.position = respawnPoint.transform.position;       
+	//      }
+	// }
 
 }
