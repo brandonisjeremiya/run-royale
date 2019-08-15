@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 410268674487146316}
   - component: {fileID: 410268674487146315}
   - component: {fileID: 410268674487146314}
+  - component: {fileID: 8596229201756795610}
   m_Layer: 0
   m_Name: speedBoost
   m_TagString: boost
@@ -91,3 +92,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8596229201756795610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410268674487146313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8cb5f06d20a2e49aa6b1d9d6f89a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroySpeed: 3
