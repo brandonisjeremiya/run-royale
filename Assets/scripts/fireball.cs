@@ -21,6 +21,7 @@ public class fireball : MonoBehaviour
 
     	if(move_forward == true){
              GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,20f);
+             Destroy(gameObject,5f);
         }
         else{
             rb.AddForce(0f,0f,0f);
