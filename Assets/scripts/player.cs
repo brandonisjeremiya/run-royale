@@ -43,6 +43,7 @@ public class player : MonoBehaviour
 
         if(move_forward == true){
              transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,7.5f*Time.deltaTime);
+            // rb.AddForce(moveSpeed*Input.GetAxis("Horizontal"),0f,10f);
             // transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,0f);
             // GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,7.5f);
         }else{
