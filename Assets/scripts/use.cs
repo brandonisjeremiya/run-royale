@@ -32,7 +32,7 @@ public void use_ramp(){
 
          if(System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) > 1)
 		{
-				//Destroy(this.gameObject);
+				
 		}else{
 			Destroy(this.gameObject);
 		}
@@ -52,7 +52,7 @@ public void use_fireball(){
 
          if(System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) > 1)
 		{
-				//Destroy(this.gameObject);
+				
 		}else{
 			Destroy(this.gameObject);
 		}
@@ -72,7 +72,7 @@ public void use_boostPad(){
 
          if(System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) > 1)
 		{
-				//Destroy(this.gameObject);
+				
 		}else{
 			Destroy(this.gameObject);
 		}
