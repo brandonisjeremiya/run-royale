@@ -69,14 +69,16 @@ public class player : MonoBehaviour
 
         // slide
 
-		if (Input.GetKeyDown ("s")) {
+		if (Input.GetKey ("s")) {
             is_sliding = true;
-			transform.localScale = new Vector3 (0.2946206f, 0.3f,0.3475012f);
+			// transform.localScale = new Vector3 (0.2946206f, 0.3f,0.3475012f);
+            transform.localScale = Vector3.Lerp (transform.localScale, new Vector3 (0.2946206f, 0.2f,0.3475012f), 20f * Time.deltaTime);
             StartCoroutine(timer(1.3f));
 		}
 
         if(is_sliding == false) {
-            transform.localScale = new Vector3 (0.2946206f, 0.9268705f,0.3475012f);
+            transform.localScale = Vector3.Lerp (transform.localScale, new Vector3 (0.2946206f, 0.9268705f,0.3475012f), 10f * Time.deltaTime);
+            // transform.localScale = new Vector3 (0.2946206f, 0.9268705f,0.3475012f);
         }
 
   //       if (Input.GetKeyDown ("s")) {
