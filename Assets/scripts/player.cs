@@ -51,7 +51,7 @@ public class player : MonoBehaviour
         }
 
         if(boosted == true){
-             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,12f*Time.deltaTime);
+             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,10f*Time.deltaTime);
         }
         // if(boosted == true){
         //      rb.velocity = new Vector3(0f,0f,15f);
