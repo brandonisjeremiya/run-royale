@@ -11,6 +11,7 @@ TagManager:
   - wall
   - ramp
   - boost
+  - fireball
   layers:
   - Default
   - TransparentFX

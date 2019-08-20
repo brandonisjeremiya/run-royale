@@ -6,7 +6,8 @@ public class fireball : MonoBehaviour
 {
 
 	private Rigidbody rb;
-	public bool move_forward  = true; 
+    public bool move_forward  = true; 
+    // public bool captured  = false; 
 
     
     void Start()
@@ -26,6 +27,13 @@ public class fireball : MonoBehaviour
         else{
             rb.AddForce(0f,0f,0f);
         }
+
+        // if(captured == true){
+        //      Destroy(gameObject,0f);
+        // }
+        // else{
+            
+        // }
 
         // force
 
@@ -47,5 +55,20 @@ public class fireball : MonoBehaviour
         {
             move_forward = false;
         }
+
+        if (any.gameObject.tag == "ramp")
+        {
+            move_forward = false;
+        }
+
+        // if (any.gameObject.tag == "player")
+        // {
+        //     captured = true;
+        // }
+
+        // if (any.gameObject.tag == "lava")
+        // {
+        //     captured = true;
+        // }
     }
 }
