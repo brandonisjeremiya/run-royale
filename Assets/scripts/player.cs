@@ -47,11 +47,12 @@ public class player : MonoBehaviour
             // transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,0f);
             // GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,7.5f);
         }else{
-            transform.Translate(Vector3.back * 0.05f);
+            // transform.Translate(Vector3.back * 0.03f);
+            transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,-3f*Time.deltaTime);
         }
 
         if(boosted == true){
-             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,10f*Time.deltaTime);
+             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,9f*Time.deltaTime);
         }
         // if(boosted == true){
         //      rb.velocity = new Vector3(0f,0f,15f);
@@ -100,7 +101,7 @@ public class player : MonoBehaviour
         if (any.gameObject.tag == "wall")
         {
             move_forward = false;
-           StartCoroutine(timer(0.8f));
+           StartCoroutine(timer(1f));
         }
 
         // boost when hit boost pad
