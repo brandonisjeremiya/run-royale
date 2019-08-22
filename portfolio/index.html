@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="isotope.pkgd.min.js"></script>
+
+	<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;” />
+	<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=false;” />
+	<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;” />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	
+</head>
+
+<body>
+
+<div class="pointer-hand">
+	<div id="replacePointer">
+		<img src="hand-02.png"/>
+	</div>
+</div>
+
+<!-- add this draggable script for fun random items on screen
+
+https://css-tricks.com/using-css-cursors/ -->
+
+<!-- <button class="pop-btn" id="contactUs">contact us</button> -->
+
+<div class="lightbox">
+
+	<div class="popup-container">
+
+		<!-- <img src="close-button.png" class="close-btn close-button"> -->
+
+		<div class="banner">
+
+			<div class="banner-img">
+				<img src="ex1.jpg">
+			</div>
+
+			<div class="element_content"><div class="focus_text">A love video</div></div>
+
+		</div>
+		
+		<div class="project_desc">
+
+		<p>Project description:</p>
+
+		<br>
+
+		<p>Software used:</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="container">
+
+	<div class="phone-container">
+
+	<img src="hand-01.png" class="phone-hand">
+
+	<div class="phone-border">
+
+	<!-- <div class="phone-pad"></div> -->
+
+	<div class="toggle right_arrow">
+		<i class="fa fa-caret-left" aria-hidden="true"></i>
+		<i class="fa fa-comment" aria-hidden="true"></i>
+	</div>
+
+		<div class="content">
+
+			<div class="info">
+
+				<div class="menu pop-btn">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>
+
+				<div class="profile">
+					<div class="img"></div>
+					<div class="name">Live Help</div>
+				</div>
+
+				<div class="close">
+				</div>
+
+			</div>			
+
+			<div class="bubbles">  
+
+				<div class="spawn"></div>
+
+				 <div class="bubble delay">
+					<div class="moi">My name is Brandon. How can I help you find what your looking for?</div>
+					<div class="toggle mobile-img stuff_2"></div>
+				</div>
+
+				<div class="bubble">
+					<div class="moi">Hello <i class="fa fa-smile-o" aria-hidden="true"></i></div>
+				</div>
+
+			</div>
+
+			<div class="input response1">
+
+				<div class="options type">
+					
+					<div id="search">
+						<input type="text" onfocus="this.value='';" id="search_input" placeholder=". . .">
+						<button class="search" id="send" onfocus="this.value=''">send<!-- <i class="fa fa-paper-plane" aria-hidden="true"></i> --></button>
+					</div>
+
+				</div>
+
+				<div id="filters" class="options group0 show">  
+
+					<!-- <button class="button is-checked" data-filter="*" id="newFromThem">I need a website</button> -->
+					<button data-filter=".websites" id="websites">Cookies</button>
+					<button data-filter=".transition">Cakes</button>
+					<button data-filter=".alkali, .alkaline-earth">Cupcakes</button>
+					<button data-filter=":not(.transition)">Special Items</button>
+					<button class="contactMe">How else can we talk<!-- <i class="fa fa-smile-o" aria-hidden="true"></i> --></button>
+
+				</div>
+
+				<div class="options group1">  
+
+					<button class="inquiry">I've got a project for you</button>
+					<button class="back">show me something else</button>
+					<button>do u eat ass?</button>
+
+				</div>
+
+				<div class="options group2">  
+
+					<button class="back">Nevermind</button>
+					<button class="contactMe">How else can we talk<!-- <i class="fa fa-smile-o" aria-hidden="true"></i> --></button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		</div>
+
+		<!-- <div class="phone-pad"></div> -->
+
+		</div>
+
+		<div class="right">
+
+			<!-- <div style="background: url(bakery.jpg) center; background-size: cover; width: 100%; height: 100vh;"> -->
+
+		<div class="grid">
+
+<!-- 		  <div class="element-item transition metal websites " data-category="transition">
+		  	<div class="element_content">
+			    <div class="full_bg bg_1"></div>
+			    <div class="full_fg fg_1"></div>
+			    <div class="focus_text">A love video</div>
+		    </div>
+		  </div>
+		  <div class="element-item metalloid " data-category="metalloid">
+		  	<div class="element_content">
+			    <div class="full_bg bg_2"></div>
+			    <div class="full_fg fg_2"></div>
+			    <div class="focus_text">Happy b-day!</div>
+		    </div>
+		  </div> -->
+		  <div class="element-item post-transition metal " data-category="post-transition">
+		    <div class="full_bg bg_1"></div>
+		  </div>
+		  <div class="element-item post-transition metal " data-category="post-transition">
+		    <div class="full_bg col_3"></div>
+		  </div>
+		  <div class="element-item transition metal " data-category="transition">
+		    <div class="full_bg stuff_2"></div>
+		  </div>
+		  <div class="element-item alkali websites " data-category="alkali">
+		    <div class="full_bg bg_2"></div>
+		  </div>
+		  <div class="element-item alkali websites " data-category="alkali">
+		    <div class="full_bg col_2"></div>
+		  </div>
+		  <div class="element-item transition websites " data-category="transition">
+		    <div class="full_bg col_3"></div>
+		  </div>
+		  <div class="element-item alkaline-earth websites " data-category="alkaline-earth">
+		    <div class="full_bg stuff_3"></div>
+		  </div>
+		  <div class="element-item transition websites " data-category="transition">
+		    <div class="full_bg col_1"></div>
+		  </div>
+		  <div class="element-item post-transition metal " data-category="post-transition">
+		    <div class="full_bg col_2"></div>
+		  </div>
+		  <div class="element-item metalloid " data-category="metalloid">
+		    <div class="full_bg col_3"></div>
+		  </div>
+		  <div class="element-item transition metal " data-category="transition">
+		    <div class="full_bg col_4"></div>
+		  </div>
+		  <div class="element-item lanthanoid metal inner-transition " data-category="lanthanoid">
+		    <div class="full_bg col_1"></div>
+		  </div>
+		  <div class="element-item noble-gas nonmetal " data-category="noble-gas">
+		    <div class="full_bg col_2"></div>
+		  </div>
+		  <div class="element-item diatomic nonmetal " data-category="diatomic">
+		    <div class="full_bg col_3"></div>
+		  </div>
+		  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+		    <div class="full_bg col_4"></div>
+		  </div>
+		  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+		    <div class="full_bg col_1"></div>
+		  </div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	$(document).bind('mousemove', function(e){
+		$('#replacePointer').css({
+		    left:  e.pageX -10,
+		    top:   e.pageY -10
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	(function ($) {
+	    $('.pop-btn').on('click', function(){
+	        $('.lightbox').fadeIn(200);
+	    });
+
+	    $('.lightbox').on('click', function(event){
+	        if("lightbox" == event.target.className){
+	            $('.lightbox').fadeOut(200);
+	        }
+	    });
+	  
+	    $('.close-btn').on('click', function(){
+	        $('.lightbox').fadeOut(200);
+	    });
+	})(jQuery);
+</script>
+
+<script type="text/javascript">
+
+	// external js: isotope.pkgd.js
+
+
+	// init Isotope
+	var $grid = $('.grid').isotope({
+	  itemSelector: '.element-item',
+	  layoutMode: 'fitRows',
+	  getSortData: {
+	    name: '.name',
+	    symbol: '.symbol',
+	    number: '.number parseInt',
+	    category: '[data-category]',
+	    weight: function( itemElem ) {
+	      var weight = $( itemElem ).find('.weight').text();
+	      return parseFloat( weight.replace( /[\(\)]/g, '') );
+	    }
+	  }
+	});
+
+	// filter functions
+	var filterFns = {
+	  // show if number is greater than 50
+	  numberGreaterThan50: function() {
+	    var number = $(this).find('.number').text();
+	    return parseInt( number, 10 ) > 50;
+	  },
+	  // show if name ends with -ium
+	  ium: function() {
+	    var name = $(this).find('.name').text();
+	    return name.match( /ium$/ );
+	  }
+	};
+
+	// bind filter button click
+	$('#filters').on( 'click', 'button', function() {
+	  var filterValue = $( this ).attr('data-filter');
+	  // use filterFn if matches value
+	  filterValue = filterFns[ filterValue ] || filterValue;
+	  $grid.isotope({ filter: filterValue });
+	});
+
+	// bind sort button click
+	$('#sorts').on( 'click', 'button', function() {
+	  var sortByValue = $(this).attr('data-sort-by');
+	  $grid.isotope({ sortBy: sortByValue });
+	});
+
+	// change is-checked class on buttons
+	$('.button-group').each( function( i, buttonGroup ) {
+	  var $buttonGroup = $( buttonGroup );
+	  $buttonGroup.on( 'click', 'button', function() {
+	    $buttonGroup.find('.is-checked').removeClass('is-checked');
+	    $( this ).addClass('is-checked');
+	  });
+	});
+ 
+</script>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+	    $(".toggle").click(function(){
+	        $(".left").toggleClass("closed");
+	    });
+
+	    $("#search").click(function(){
+	        $(".input").addClass("open");
+	    });
+
+	    $(".bubbles").click(function(){
+	        $(".input").removeClass("open");
+	    });
+
+	    $(".options").find(":button").click(function (){
+	        $(".input").removeClass("open");
+	    });
+
+	    $("#websites").click(function(){
+	    	setTimeout(function(){
+	        $(".options").removeClass("show");
+	        $(".group1").addClass("show");
+	    	}, 500);
+	    });
+
+	    $(".back").click(function(){
+	    	setTimeout(function(){
+	        $(".options").removeClass("show");
+	        $(".group0").addClass("show");
+	        }, 500);
+	    });
+
+	    $(".inquiry").click(function(){
+	    	setTimeout(function(){
+	        $(".options").removeClass("show");
+	        $(".group2").addClass("show");
+	        }, 500);
+	    });
+
+	    //  auto scroll to bottom on input
+
+	 //    $(".options").find(":button").click(function () {
+        
+		// 	$('.bubbles').animate({
+		//         scrollTop: $(".spawn").offset().top
+		//     });
+        
+  //       return false;
+		// });
+	
+	});
+
+</script>
+
+<script type="text/javascript">
+
+	var websiteStuff = `<div class="bubble delay">
+					<div class="moi">Here are some of our cookies</div>
+					<div class="toggle mobile-img stuff_1"></div>
+				</div>
+
+				<div class="bubble">
+					<div class="user">Show me your cookies</div>
+				</div>`
+
+
+	function handleClick(e) {  
+	  $( ".spawn" ).last().after(websiteStuff);
+	}
+
+	$('#websites').click(handleClick);
+
+</script>
+
+<script type="text/javascript">
+
+	var showMore = `<div class="bubble delay">
+					<div class="moi">lol what are you looking for exactly?</div>
+				</div>
+
+				<div class="bubble">
+					<div class="user">Boring <i class="fa fa-meh-o" aria-hidden="true"></i></div>
+				</div>`
+
+
+	function handleClick(e) {  
+	  $( ".spawn" ).last().after(showMore);
+	}
+
+	$('.back').click(handleClick);
+
+</script>
+
+<script type="text/javascript">
+
+	var contactMe = `<div class="bubble delay">
+					<div class="moi">Give me a call at (647)-687-7283 anytime after 1-4pm est</div>
+				</div>
+
+				<div class="bubble">
+					<div class="user">How else can we talk</div>
+				</div>`
+
+
+	function handleClick(e) {  
+	  $( ".spawn" ).last().after(contactMe);
+	}
+
+	$('.contactMe').click(handleClick);
+
+</script>
+
+<script type="text/javascript">
+
+	var inquiry = `<div class="bubble delay">
+					<div class="moi">Tell me about the project and I will get back to you a.s.a.p!</div>
+				</div>
+
+				<div class="bubble">
+					<div class="user">I've got a project for you</div>
+				</div>`
+
+
+	function handleClick(e) {  
+	  $( ".spawn" ).last().after(inquiry);
+	}
+
+	$('.inquiry').click(handleClick);
+
+</script>
+
+<script type="text/javascript">
+
+	function makeSites(websiteQuestion, websiteResponse) {//whatever you pass in 
+	  var websites = `<div class="bubble delay">
+	                    <div class="moi">${websiteResponse}</div>
+	                </div>
+
+	                <div class="bubble">
+	                    <div class="user">${websiteQuestion}<div>
+	                </div>`
+	  
+	  return websites;
+	}
+
+	$("#send").click(function(){
+	  var search_input = $("#search_input").val();
+	  
+	  if (search_input.includes("word")) {
+	    console.log("HAS WORD");
+	    
+	    $(".bubbles").append(makeSites(search_input, "ok i know what your saying. here"));
+	  } else {
+	    console.log("NO WORD");
+	     $(".bubbles").append(makeSites(search_input, "sorry bruh i have no idea wtf u talm bout"));
+	  }
+
+
+	  
+	  return false;
+	}) 
+
+
+</script>
+
+</body>
+</html>

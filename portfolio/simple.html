@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="isotope.pkgd.min.js"></script>
+
+	<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;” />
+	<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=false;” />
+	<meta name=”viewport” content=”width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;” />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+<body>
+
+<!-- <button class="pop-btn" id="contactUs">contact us</button> -->
+
+<div class="lightbox">
+
+	<div class="popup-container">
+
+	<!-- <img src="close-button.png" class="close-btn close-button"> -->
+
+		<h2>What's up?</h2>
+
+		poop
+
+	</div>
+
+</div>
+
+<div class="container container-s">
+
+	<div class="information-s">
+
+		<div class="profile">
+			<div class="img"></div>
+			<div class="name">Brandon</div>
+		</div>
+
+		<div class="bubbles bubbles-s">
+			<div class="bubble">
+				<div class="moi">This is my portfolio. I do a lot of media stuff. Take a look and let me know if there is a project I could help you with.</div>
+			</div>
+			<div class="bubble">
+				<div class="moi">Hi, what's up :)</div>
+			</div>
+		</div>
+
+		<div id="filters" class="options group0 show options-s">  
+
+			<button data-filter=".websites" id="websites">websites</button>
+			<button data-filter=".transition">3D renders</button>
+			<button data-filter=".alkali, .alkaline-earth">animations</button>
+			<button data-filter=":not(.transition)">other</button>
+			<button class="contactMe">about me</button>
+
+		</div>
+
+	</div>
+
+	<div class="projects-s">
+
+		<div class="right">
+
+			<div class="grid">
+
+			  <div class="element-item transition metal websites " data-category="transition">
+			  	<div class="element_content">
+				    <div class="full_bg bg_1"></div>
+				    <div class="full_fg fg_1"></div>
+				    <div class="focus_text">Latest work</div>
+			    </div>
+			  </div>
+			  <div class="element-item metalloid " data-category="metalloid">
+			  	<div class="element_content">
+				    <div class="full_bg bg_2"></div>
+				    <div class="full_fg fg_2"></div>
+				    <div class="focus_text">Happy b-day!</div>
+			    </div>
+			  </div>
+			  <div class="element-item post-transition metal " data-category="post-transition">
+			    <div class="full_bg col_2"></div>
+			  </div>
+			  <div class="element-item post-transition metal " data-category="post-transition">
+			    <div class="full_bg col_3"></div>
+			  </div>
+			  <div class="element-item transition metal " data-category="transition">
+			    <div class="full_bg stuff_2"></div>
+			  </div>
+			  <div class="element-item alkali websites " data-category="alkali">
+			    <div class="full_bg col_1"></div>
+			  </div>
+			  <div class="element-item alkali websites " data-category="alkali">
+			    <div class="full_bg col_2"></div>
+			  </div>
+			  <div class="element-item transition websites " data-category="transition">
+			    <div class="full_bg col_3"></div>
+			  </div>
+			  <div class="element-item alkaline-earth websites " data-category="alkaline-earth">
+			    <div class="full_bg stuff_3"></div>
+			  </div>
+			  <div class="element-item transition websites " data-category="transition">
+			    <div class="full_bg col_1"></div>
+			  </div>
+			  <div class="element-item post-transition metal " data-category="post-transition">
+			    <div class="full_bg col_2"></div>
+			  </div>
+			  <div class="element-item metalloid " data-category="metalloid">
+			    <div class="full_bg col_3"></div>
+			  </div>
+			  <div class="element-item transition metal " data-category="transition">
+			    <div class="full_bg col_4"></div>
+			  </div>
+			  <div class="element-item lanthanoid metal inner-transition " data-category="lanthanoid">
+			    <div class="full_bg col_1"></div>
+			  </div>
+			  <div class="element-item noble-gas nonmetal " data-category="noble-gas">
+			    <div class="full_bg col_2"></div>
+			  </div>
+			  <div class="element-item diatomic nonmetal " data-category="diatomic">
+			    <div class="full_bg col_3"></div>
+			  </div>
+			  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+			    <div class="full_bg col_4"></div>
+			  </div>
+			  <div class="element-item actinoid metal inner-transition " data-category="actinoid">
+			    <div class="full_bg col_1"></div>
+			  </div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	(function ($) {
+	    $('.pop-btn').on('click', function(){
+	        $('.lightbox').fadeIn(200);
+	    });
+
+	    $('.lightbox').on('click', function(event){
+	        if("lightbox" == event.target.className){
+	            $('.lightbox').fadeOut(200);
+	        }
+	    });
+	  
+	    $('.close-btn').on('click', function(){
+	        $('.lightbox').fadeOut(200);
+	    });
+	})(jQuery);
+</script>
+
+<script type="text/javascript">
+
+	// external js: isotope.pkgd.js
+
+
+	// init Isotope
+	var $grid = $('.grid').isotope({
+	  itemSelector: '.element-item',
+	  layoutMode: 'fitRows',
+	  getSortData: {
+	    name: '.name',
+	    symbol: '.symbol',
+	    number: '.number parseInt',
+	    category: '[data-category]',
+	    weight: function( itemElem ) {
+	      var weight = $( itemElem ).find('.weight').text();
+	      return parseFloat( weight.replace( /[\(\)]/g, '') );
+	    }
+	  }
+	});
+
+	// filter functions
+	var filterFns = {
+	  // show if number is greater than 50
+	  numberGreaterThan50: function() {
+	    var number = $(this).find('.number').text();
+	    return parseInt( number, 10 ) > 50;
+	  },
+	  // show if name ends with -ium
+	  ium: function() {
+	    var name = $(this).find('.name').text();
+	    return name.match( /ium$/ );
+	  }
+	};
+
+	// bind filter button click
+	$('#filters').on( 'click', 'button', function() {
+	  var filterValue = $( this ).attr('data-filter');
+	  // use filterFn if matches value
+	  filterValue = filterFns[ filterValue ] || filterValue;
+	  $grid.isotope({ filter: filterValue });
+	});
+
+	// bind sort button click
+	$('#sorts').on( 'click', 'button', function() {
+	  var sortByValue = $(this).attr('data-sort-by');
+	  $grid.isotope({ sortBy: sortByValue });
+	});
+
+	// change is-checked class on buttons
+	$('.button-group').each( function( i, buttonGroup ) {
+	  var $buttonGroup = $( buttonGroup );
+	  $buttonGroup.on( 'click', 'button', function() {
+	    $buttonGroup.find('.is-checked').removeClass('is-checked');
+	    $( this ).addClass('is-checked');
+	  });
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+
+CHAT
+- finalize options reveal [DONE]
+- link mobile img bubbles to chat collapse [NEEDS FIX]
+- add dynamic input options [NEEDS FIX]
+- scroll to bottom on send [NEEDS FIX]
+- add hamburger menu pop up (include simple view, night mode, quick contact info)
+
+TILES
+- add intro tile
+- add better hover
+- change size on mobile
+- delay tile change
+- add tiles
+
+OVERALL
+- add introduction animation loader (play once/remove on refresh)
+
+
+Wahid help pens
+https://codepen.io/jquerydumbass/pen/XVzBJL?editors=1111
+https://codepen.io/parthianshotgun/pen/opoMNb?editors=1111
