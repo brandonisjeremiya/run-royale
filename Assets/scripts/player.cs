@@ -25,12 +25,16 @@ public class player : MonoBehaviour
     // sliding
     public bool is_sliding  = false; 
 
+    // captured
+    // public bool is_captured  = false; 
+
     // Start is called before the first frame update
     void Start()
     {
     	moveSpeed = 5f;
     	onGround = true;
         is_sliding  = false;
+        // is_captured  = false; 
     	rb = GetComponent<Rigidbody>();
     }
 
@@ -47,18 +51,18 @@ public class player : MonoBehaviour
             // transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,0f);
             // GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,7.5f);
         }else{
-            transform.Translate(Vector3.back * 0.05f);
+            // transform.Translate(Vector3.back * 0.03f);
+            transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,-3f*Time.deltaTime);
         }
 
         if(boosted == true){
-             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,10f*Time.deltaTime);
+             transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime,0f,9f*Time.deltaTime);
         }
-        // if(boosted == true){
-        //      rb.velocity = new Vector3(0f,0f,15f);
+
+        // if(is_captured == true){
+        //      transform.Translate(0f,0f,0f*Time.deltaTime);
         // }
-        // else{
-        //     rb.AddForce(0f,0f,0f);
-        // }
+        
 
         // jump
         if(onGround) {
@@ -100,7 +104,7 @@ public class player : MonoBehaviour
         if (any.gameObject.tag == "wall")
         {
             move_forward = false;
-           StartCoroutine(timer(0.8f));
+           StartCoroutine(timer(1f));
         }
 
         // boost when hit boost pad
@@ -110,6 +114,14 @@ public class player : MonoBehaviour
             boosted = true;
            StartCoroutine(timer(0.5f));
         }
+
+        // stop if captured
+
+        // if (any.gameObject.tag == "fireball")
+        // {
+        //     is_captured = true;
+        //    StartCoroutine(timer(0.5f));
+        // }
     }
 
     //This function set how long the player bounce back
@@ -119,6 +131,7 @@ public class player : MonoBehaviour
             move_forward = true;
             boosted = false;
             is_sliding = false;
+            // is_captured = false;
      }
 
     //   void use_ramp(){
